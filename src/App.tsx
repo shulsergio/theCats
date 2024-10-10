@@ -36,7 +36,7 @@ function App() {
       {loading && <Loader />}
       {error && <p>Something wrong, try again...</p>}
       {photos.length > 0 && <ImageGallery photos={photos} />}
-      {photos.length === 0 && <p> Click button </p>}
+      {photos.length === 0 && <p>Click button</p>}
     </>
   );
 }
