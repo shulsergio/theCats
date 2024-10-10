@@ -33,10 +33,35 @@
   }
 }
 
-.card {
-  padding: 2em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+label {
+  margin: 0;
 }
 
-.read-the-docs {
-  color: #888;
+p {
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+a,
+button {
+  text-decoration: none;
+}
+h1 {
+  padding-top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(0, 0, 157);
+  text-align: center;
+  padding-bottom: 12px;
 }

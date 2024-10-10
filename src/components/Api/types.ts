@@ -13,6 +13,7 @@ export interface BreedsProps{
 
 }
 export interface PhotoItemProps {
+breeds: BreedsProps[];
   id: string;
   url: string;
     width: number;
