@@ -8,7 +8,7 @@ export const fetchPhotoItems = async ():Promise<Response> => {
  
 
  const response = await axios.get(
-  `https://api.thecatapi.com/v1/images/search?limit=${photos}&api_key=live_2akpYqZpoBnaEBbltgj0wiRpds4jhfSkDgA6ggUWerXfV1aN9jeGBccfnpWXiAbp`);
+  `https://api.thecatapi.com/v1/images/search?limit=${photos}&mime_types=jpg&api_key=live_2akpYqZpoBnaEBbltgj0wiRpds4jhfSkDgA6ggUWerXfV1aN9jeGBccfnpWXiAbp`);
     console.log("Response data:", response.data);
 
       return response.data;

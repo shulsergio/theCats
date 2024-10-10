@@ -1,6 +1,7 @@
 import React from "react";
 import { PhotoItemProps } from "../Api/types";
 import ImageCard from "../ImageCard/ImageCard";
+import css from "./ImageGallery.module.css";
 
 interface ImageGalleryProps {
   photos: PhotoItemProps[];
@@ -8,7 +9,7 @@ interface ImageGalleryProps {
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ photos }) => {
   return (
-    <ul>
+    <ul className={css.box}>
       {photos.map((item) => (
         <li key={item.id}>
           <ImageCard
@@ -16,7 +17,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ photos }) => {
             breed={
               item.breeds.length > 0 && item.breeds[0].name
                 ? item.breeds[0].name
-                : "No name"
+                : "Standart"
             }
           />
         </li>
