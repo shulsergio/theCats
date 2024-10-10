@@ -1,17 +1,18 @@
+import Button from "../Button/Button";
 
 
-// interface SearchProps{
-//     onSubmit: () => void;
-// }
+interface SearchProps{
+    onSubmit: () => void;
+}
 
-// const Search = ({ onSubmit}:SearchProps) => { 
+const Search: React.FC<SearchProps> = ({ onSubmit}) => { 
 
-//     return (
-//         <div>
-// <Button>
-//         </div>
-//     )
+    return (
+        <div>
+<Button type='button' onClick={onSubmit} />
+        </div>
+    )
 
 
-// }
-// export default Search;
+}
+export default Search;
