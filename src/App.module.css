@@ -1,0 +1,19 @@
+/* Light Theme */
+.light {
+  background-color: white;
+  color: black;
+}
+
+.light h1 {
+  color: #6060ff;
+}
+
+/* Dark Theme */
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.dark h1 {
+  color: lightblue;
+}

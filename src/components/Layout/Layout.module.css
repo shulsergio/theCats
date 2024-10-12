@@ -1,0 +1,15 @@
+.box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box > :first-child {
+  margin: 0 auto; /* Центрирование первого дочернего элемента */
+}
+
+.box > :last-child {
+  margin-right: 10px;
+  margin-left: 0 auto; /* Прижимаем последний элемент вправо */
+}
