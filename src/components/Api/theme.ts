@@ -5,7 +5,7 @@ export const darkTheme ={
         bodySecondary: '#6a6a6a',
         colorBorder:'#fff',
         colorText: '#CACACA',
-        headingColor: '#6060ff'
+        headingColor: '#a4e8ff'
 };
 
 export const lightTheme = { 
@@ -13,7 +13,7 @@ export const lightTheme = {
         bodyPrimary: '#fff',
         bodySecondary: '#ebebff',
         colorText: '#000',
-        headingColor: '#a4e8ff'
+        headingColor: '#6060ff'
 }
 
 export const GlobalStyles = createGlobalStyle`

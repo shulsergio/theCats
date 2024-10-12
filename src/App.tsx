@@ -66,16 +66,16 @@ function App() {
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles />
         <Layout>
-          <Search onSubmit={onHandleSubmit} />
+          <h2>Random cats photo</h2>
           <button onClick={switchTheme}>
-            <MdOutlineDarkMode size={32} />
+            <MdOutlineDarkMode size={24} />
           </button>
         </Layout>
+        <Search onSubmit={onHandleSubmit} />
         {loading && <Loader />}
         {error && <p>Something wrong, try again...</p>}
         {photos.length > 0 && <ImageGallery photos={photos} />}
-        {photos.length === 0 && <p>Click button</p>}
-      </ThemeProvider>{" "}
+      </ThemeProvider>
     </>
   );
 }
