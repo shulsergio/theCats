@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import css from "./App.module.css";
+// import css from "./App.module.css";
 import Search from "./components/Search/Search";
 import { Response, PhotoItemProps } from "./components/Api/types";
 import { fetchPhotoItems } from "./components/Api/apiPhotos";
@@ -9,17 +9,13 @@ import Loader from "./components/Loader/Loader";
 import Layout from "./components/Layout/Layout";
 
 import { MdOutlineDarkMode } from "react-icons/md";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, GlobalStyles, lightTheme } from "./components/Api/theme";
 
 function App() {
   const [error, setError] = useState<string | null>(null);
   const [photos, setPhotos] = useState<PhotoItemProps[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-
-  const toggleTheme = (): void => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
 
   useEffect(() => {
     setLoading(true);
@@ -44,6 +40,14 @@ function App() {
     setPhotos([]);
     fetchData();
   };
+  const [theme, setTheme] = useState<string>("light");
+  const switchTheme = (): void => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
 
   // Применять позже
   // useEffect(() => {
@@ -59,10 +63,11 @@ function App() {
 
   return (
     <>
-      <div className={isDarkMode ? css.dark : css.light}>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyles />
         <Layout>
           <Search onSubmit={onHandleSubmit} />
-          <button onClick={toggleTheme}>
+          <button onClick={switchTheme}>
             <MdOutlineDarkMode size={32} />
           </button>
         </Layout>
@@ -70,7 +75,7 @@ function App() {
         {error && <p>Something wrong, try again...</p>}
         {photos.length > 0 && <ImageGallery photos={photos} />}
         {photos.length === 0 && <p>Click button</p>}
-      </div>
+      </ThemeProvider>{" "}
     </>
   );
 }

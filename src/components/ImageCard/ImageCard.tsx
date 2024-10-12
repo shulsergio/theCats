@@ -1,5 +1,10 @@
 import React from "react";
 import css from "./ImageCard.module.css";
+import styled from "styled-components";
+
+const DivItem = styled.div`
+  background: ${(props) => props.theme.bodySecondary};
+`;
 
 interface ImageCardProps {
   photo: string;
@@ -12,10 +17,10 @@ const ImageCard: React.FC<ImageCardProps> = ({ photo, breed }) => {
 
   return (
     <>
-      <div className={css.item}>
+      <DivItem className={css.item}>
         <img className={css.img} src={photo} alt={breed} />
-        <p>Name: {breed} cat</p>
-      </div>
+        <p className={css.itemText}>Name: {breed} cat</p>
+      </DivItem>
     </>
   );
 };

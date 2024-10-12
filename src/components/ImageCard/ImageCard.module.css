@@ -1,10 +1,11 @@
 .item {
   width: 320px;
   height: 260px;
-  border: 1px solid #e3fdff;
+  border: 1px solid #e7fdff;
   border-radius: 4px;
-  box-shadow: 4px 4px 8px rgba(32, 33, 36, 0.35);
+  box-shadow: 4px 4px 8px rgba(32, 33, 36, 0.8);
   transition: box-shadow 0.4s ease;
+  background: #6a6a6a;
 }
 .img {
   width: 100%;
@@ -12,5 +13,10 @@
   object-fit: cover;
 }
 .item:hover {
-  box-shadow: 8px 8px 16px rgba(70, 73, 245, 0.7);
+  box-shadow: 8px 8px 16px rgba(76, 79, 248, 0.8);
+}
+.itemText {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
 }
